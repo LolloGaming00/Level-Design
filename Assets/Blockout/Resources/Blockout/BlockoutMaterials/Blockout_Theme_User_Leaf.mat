@@ -36,8 +36,8 @@ Material:
     - _Transmission: 0.93
     - __dirty: 0
     m_Colors:
-    - _Color: {r: 0.4882878, g: 0.29128405, b: 0.27976188, a: 0.5}
-    - _Color_1: {r: 0.4882878, g: 0.29128405, b: 0.27976188, a: 0.5}
+    - _Color: {r: 0.35791937, g: 0.11312054, b: 0.43369672, a: 0.5}
+    - _Color_1: {r: 0.35791937, g: 0.11312054, b: 0.43369672, a: 0.5}
     - _SpecColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1

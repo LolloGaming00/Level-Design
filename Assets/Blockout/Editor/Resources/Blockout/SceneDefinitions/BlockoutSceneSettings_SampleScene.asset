@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BlockoutSceneSettings_SampleScene
   m_EditorClassIdentifier: RadicalForge.Blockout::RadicalForge.Blockout.BlockoutSceneSettings
   sceneName: SampleScene
-  currentTheme: 0
+  currentTheme: -1
   currentTexture: 0
   cameraAnchor: []
   assetDictionary: []

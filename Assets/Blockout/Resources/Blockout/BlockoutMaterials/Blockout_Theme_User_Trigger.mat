@@ -48,8 +48,8 @@ Material:
     - _Metallic: 0
     - __dirty: 1
     m_Colors:
-    - _Color: {r: 0.55952376, g: 0.41937578, b: 0.37003705, a: 1}
-    - _Color_1: {r: 0.55952376, g: 0.41937578, b: 0.37003705, a: 1}
+    - _Color: {r: 0.55952376, g: 0.39371827, b: 0.2951747, a: 1}
+    - _Color_1: {r: 0.55952376, g: 0.39371827, b: 0.2951747, a: 1}
     - _SpecColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
