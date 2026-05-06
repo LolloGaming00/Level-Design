@@ -4,10 +4,16 @@ using UnityEngine.UI;
 
 public class DialogueUI : MonoBehaviour
 {
+    [Header("Audio")]
+    public AudioSource dialogueSource;
+    public AudioClip openSound;
+
     public static DialogueUI Instance { get; private set; }
     public TextMeshProUGUI textDisplay;
     public Image portraitDisplay;
     public PlayerMovement playerMovement; // Riferimento al movimento del player per bloccarlo durante il dialogo
+    public GameObject blackScreen;
+    private bool keepBlackScreen = false;
 
     private void Awake()
     {
@@ -28,27 +34,33 @@ public class DialogueUI : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-    public void ShowDialogue(string message, Sprite portrait = null)
+    public void ShowDialogue(string message, Sprite portrait = null, bool stayBlack = false)
     {
         gameObject.SetActive(true);
         textDisplay.text = message;
+        keepBlackScreen = stayBlack; // Salviamo la scelta
+
         if (portrait != null)
         {
             portraitDisplay.sprite = portrait;
             portraitDisplay.enabled = true;
         }
 
-        playerMovement.enabled = false; // Disabilita il movimento del player durante il dialogo
-        // Opzionale: Sblocca il mouse per permettere il click
+        if (playerMovement != null) playerMovement.enabled = false;
         Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        if (openSound != null) dialogueSource.PlayOneShot(openSound);
     }
 
     public void CloseDialogue()
     {
         gameObject.SetActive(false);
 
-        // Ri-blocca il mouse per tornare al movimento del player
+        if (blackScreen != null)
+            blackScreen.SetActive(false);
+
         Cursor.lockState = CursorLockMode.Locked;
-        playerMovement.enabled = true; // Riabilita il movimento del player dopo il dialogo
+        Cursor.visible = false;
+        if (playerMovement != null) playerMovement.enabled = true;
     }
 }
