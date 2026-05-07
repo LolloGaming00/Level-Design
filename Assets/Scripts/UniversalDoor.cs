@@ -31,7 +31,7 @@ public class UniversalDoor : MonoBehaviour, IInteractable
         ToggleDoor();
     }
 
-    private void ToggleDoor()
+    public void ToggleDoor()
     {
         isOpen = !isOpen;
         float angle = isOpen ? 90f : -90f;

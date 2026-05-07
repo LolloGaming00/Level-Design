@@ -8,6 +8,10 @@ public class SpecialEventInteractable : MonoBehaviour, IInteractable
     public Transform npcSpawnPoint;
     public string initialDialogue = "C'è qualcuno dietro di me...";
 
+    [Header("Audio")]
+    public AudioClip scareSound; // Trascina qui il file audio
+    private AudioSource audioSource;
+
     [Header("Riferimenti")]
     public UniversalDoor doorToRelock;
     public Transform teleportTarget;
@@ -16,6 +20,15 @@ public class SpecialEventInteractable : MonoBehaviour, IInteractable
     public PlayerMovement playerMovement;
 
     private bool eventTriggered = false;
+
+    private void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null) audioSource = gameObject.AddComponent<AudioSource>();
+
+        audioSource.playOnAwake = false;
+        audioSource.spatialBlend = 0f;
+    }
 
     public void Interact()
     {
@@ -30,6 +43,8 @@ public class SpecialEventInteractable : MonoBehaviour, IInteractable
     {
         // 1. Appare l'NPC
         GameObject npc = Instantiate(npcPrefab, npcSpawnPoint.position, npcSpawnPoint.rotation);
+
+        if (scareSound != null) audioSource.PlayOneShot(scareSound);
 
         // 2. Forza lo sguardo ruotando Corpo e Testa
         yield return StartCoroutine(RuotaFluidaVerso(npc.transform, 0.3f));
@@ -46,8 +61,9 @@ public class SpecialEventInteractable : MonoBehaviour, IInteractable
 
         // 5. Teletrasporto e Reset Porta
         TeletrasportaPlayer();
+        Destroy(npc);
         doorToRelock.isLocked = true;
-        doorToRelock.transform.rotation = Quaternion.identity;
+        doorToRelock.ToggleDoor();
 
         yield return new WaitForSeconds(1f);
         blackScreen.SetActive(false);

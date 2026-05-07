@@ -29,7 +29,10 @@ public class OneTimeInteractable : MonoBehaviour, IInteractable
 
         // 2. Sblocca la porta
         if (doorToUnlock != null)
+        {
             doorToUnlock.UnlockDoor();
+            doorToUnlock.ToggleDoor();
+        }
 
         // 3. Mostra il dialogo (usando il sistema che abbiamo già)
         // Prendiamo l'identità da questo oggetto stesso
