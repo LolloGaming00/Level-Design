@@ -3339,7 +3339,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 128487251}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -4848,7 +4848,7 @@ MonoBehaviour:
   sorgenteAudio: {fileID: 1154483207}
   portaTarget: {fileID: 1353516283}
   playerMovement: {fileID: 1579786193}
-  testoDialogo: Cos'era quel rumore dietro la porta?
+  testoDialogo: ..... I better keep quiet and not disturb her.
 --- !u!65 &180277856
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4877,7 +4877,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 180277853}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -11511,7 +11511,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 449900800}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -19681,6 +19681,103 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4433314630135694, guid: 7eeb0cdde00cbd146872b82a9886b849, type: 3}
   m_PrefabInstance: {fileID: 773777991}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &776451921
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 776451922}
+  - component: {fileID: 776451923}
+  m_Layer: 0
+  m_Name: Point Light (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &776451922
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 776451921}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 10.364, y: 8.983, z: -30.199}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1561161866}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!108 &776451923
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 776451921}
+  m_Enabled: 1
+  serializedVersion: 12
+  m_Type: 2
+  m_Color: {r: 1, g: 0.7490196, b: 0, a: 1}
+  m_Intensity: 1
+  m_Range: 10
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize2D: {x: 0.5, y: 0.5}
+  m_Shadows:
+    m_Type: 2
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ForceVisible: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+  m_LightUnit: 1
+  m_LuxAtDistance: 1
+  m_EnableSpotReflector: 1
 --- !u!1001 &780075860
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24242,7 +24339,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UniversalDoor
   isLocked: 1
-  lockedMessage: La porta non si apre...
+  lockedMessage: The basement... I believe, at least. I never saw this room open.
 --- !u!114 &1001324171
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29473,7 +29570,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TrapdoorEvent
   npcPrefab: {fileID: 319551246}
   npcSpawnPoint: {fileID: 1189674598}
-  initialDialogue: "C'\xE8 qualcuno dietro di me..."
+  initialDialogue: What are you doing?
   scareSound: {fileID: 8300000, guid: 2e71f9543ffd460459a985a4d2da6b6c, type: 3}
   doorToRelock: {fileID: 1001324170}
   teleportTarget: {fileID: 1047844077}
@@ -32189,7 +32286,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UniversalDoor
   isLocked: 1
-  lockedMessage: La porta non si apre...
+  lockedMessage: Grandma's Lab. I... Don't really want to think about it.
 --- !u!1 &1364024891
 GameObject:
   m_ObjectHideFlags: 0
@@ -34851,6 +34948,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 199322529575201886, guid: e965607d197150b43a6dabdf25ed1ac5, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -36468,6 +36569,7 @@ Transform:
   m_Children:
   - {fileID: 1364024893}
   - {fileID: 2098819890}
+  - {fileID: 776451922}
   - {fileID: 570291294}
   - {fileID: 488026190}
   m_Father: {fileID: 0}
@@ -36627,11 +36729,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 56484b64ff72c2d4d8e56f39ec47bfa7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -21.18
+      value: 11.58
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 56484b64ff72c2d4d8e56f39ec47bfa7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.11
+      value: 6.67
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 56484b64ff72c2d4d8e56f39ec47bfa7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -47959,7 +48061,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UniversalDoor
   isLocked: 1
-  lockedMessage: La porta non si apre...
+  lockedMessage: Grandma's study. She always keeps it locked.
 --- !u!1 &2106598395
 GameObject:
   m_ObjectHideFlags: 0
@@ -48106,7 +48208,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UniversalDoor
   isLocked: 1
-  lockedMessage: La porta non si apre...
+  lockedMessage: Grandma's room. Better not disturb her at night...
 --- !u!1001 &2121159890
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -48670,7 +48772,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3487472ad18a66143aaafca67b9c3d94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OneTimeInteractable
-  message: "Dopo aver letto questo, qualcosa \xE8 cambiato..."
+  message: I should hurry back to bed.
   blackScreen: {fileID: 1049008268}
   doorToUnlock: {fileID: 1001324170}
 --- !u!114 &2132805757
@@ -48706,8 +48808,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.7, y: 1.66, z: 1.27}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1001 &2133432220
 PrefabInstance:
   m_ObjectHideFlags: 0
